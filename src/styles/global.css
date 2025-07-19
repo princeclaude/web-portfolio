@@ -1,0 +1,17 @@
+
+
+.custom-cursor {
+  cursor: url('/customcursor.png'), auto;
+
+
+}
+
+/* For all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
