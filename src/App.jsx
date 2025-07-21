@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { useDarkMode } from "./contexts/DarkModeContext";
 import FirstVisitExperience from "./components/FirstVisitExperience";
 import { Toaster } from "react-hot-toast";
+import ProjectsPage from "./pages/ProjectsPage";
 
 // Pages
 
@@ -27,6 +28,7 @@ function App() {
           
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           
         </Routes>
       </div>
