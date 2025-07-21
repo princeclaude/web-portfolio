@@ -4,7 +4,7 @@ import { useDarkMode } from "./contexts/DarkModeContext";
 import FirstVisitExperience from "./components/FirstVisitExperience";
 import { Toaster } from "react-hot-toast";
 import ProjectsPage from "./pages/ProjectsPage";
-
+import Contact from "./pages/Contact";
 // Pages
 
 import About from "./pages/About";
@@ -29,6 +29,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<Contact />} />
+          
           
         </Routes>
       </div>

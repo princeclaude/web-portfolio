@@ -55,8 +55,8 @@ const AcademicHighlight = () => {
             It might interest you!
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            I have a strong academic foundation, a Bsc in Computer Science and an Msc in Software engineering, additionally, a certified project manager professional(PMP). My journey began with curiosity and led to a B.Sc. degree, where I explored data structures, algorithms, web technologies, and problem-solving at scale.
-            Furthermore, going indepth with full focus on Software engineering and Artificial intelligence(Msc), a decision that has expanded my knowledge in software development throughtout its lifecycle.
+            I have a strong academic foundation, a Bsc in Computer Science. My journey began with curiosity and led to a B.Sc. degree, where I explored data structures, algorithms, web technologies, and problem-solving at scale.
+            Furthermore, going indepth with full focus on Software engineering, a decision that has expanded my knowledge in software development throughtout its lifecycle.
             <br />
             <br />
             This backgroud helps me blend solid theory with practical web development — writing clean, efficient, and scalable code.

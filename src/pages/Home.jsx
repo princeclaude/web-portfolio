@@ -22,7 +22,8 @@ import {
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import GithubProjects from "../components/GithubProjects";
-import WhatsAppCta from "../components/WhatsAppCta";
+
+import toast from "react-hot-toast";
 
 
 
@@ -65,9 +66,9 @@ const Home = () => {
               1500,
               "A React Enthusiast",
               1500,
-              "A Firebase Wizard",
+              "A react native developer",
               1500,
-              "A Tailwind Expert",
+              "I use Tailwind css to make styling easier and more modern.",
               1500,
               "Proficient in Python",
               1500,
@@ -94,8 +95,13 @@ const Home = () => {
             >
               View Projects
             </Link>
-            <Link
-              to="/projects"
+            <a
+              href="/resume.pdf"
+              download
+              onClick={() =>
+                toast.success("Thank you for downloading my resume! 😊")
+                
+              }
               className={`custom-cursor mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
                 darkMode
                   ? "border-white text-white hover:bg-white hover:text-black"
@@ -103,10 +109,9 @@ const Home = () => {
               }`}
             >
               Download Resume
-            </Link>
+            </a>
           </div>
-          <GithubProjects/>
-
+          <GithubProjects />
         </motion.section>
 
         <AcademicHighlight />
@@ -137,7 +142,7 @@ const Home = () => {
         </section>
         {/* <WhatsAppCta/> */}
         <ContactForm />
-        <Footer/>
+        <Footer />
       </>
     );
 };
