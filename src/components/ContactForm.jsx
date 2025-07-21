@@ -32,6 +32,12 @@ const ContactForm = () => {
   const isCaptchaCorrect = () =>
     parseInt(formData.captcha) === captchaQuestion.a + captchaQuestion.b;
 
+  const template_params = {
+    from_name: formData.name,
+    reply_to: formData.email,
+    message: formData.message,
+  };
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -49,12 +55,7 @@ const ContactForm = () => {
     // Send via EmailJS
     setIsSending(true);
     emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, formData, {
-        from_name: formData.name,
-        reply_to: formData.email,
-        message: formData.message,
-        
-      } , PUBLIC_KEY)
+      .send(SERVICE_ID, TEMPLATE_ID, template_params , PUBLIC_KEY)
       .then(() => {
         toast.success("Message sent successfully!");
         setFormData({ name: "", email: "", message: "", captcha: "" });
