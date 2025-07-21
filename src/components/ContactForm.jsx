@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { FaSpinner } from "react-icons/fa";
 
 
-const SERVICE_ID = "your_service_id";
-const TEMPLATE_ID = "your_template_id";
-const PUBLIC_KEY = "your_public_key";
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,18 @@ const ContactForm = () => {
   });
 
   const [isSending, setIsSending] = useState(false);
+  const [captchaQuestion, setCaptchaQuestion] = useState({ a: 0, b: 0 });
+
+
+
+  useEffect(() => {
+    const a = Math.floor(Math.random() * 10);
+    const b = Math.floor(Math.random() * 10);
+    setCaptchaQuestion({ a, b });
+  }, []);
+
+  const isCaptchaCorrect = () =>
+    parseInt(formData.captcha) === captchaQuestion.a + captchaQuestion.b;
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,16 +40,21 @@ const ContactForm = () => {
 
     // Validate fields
     const { name, email, message, captcha } = formData;
+    
     if (!name.trim()) return toast.error("Please enter your name.");
     if (!email.trim()) return toast.error("Please enter your email.");
     if (!/\S+@\S+\.\S+/.test(email)) return toast.error("Enter a valid email.");
     if (!message.trim()) return toast.error("Message is required.");
-    if (captcha !== "5") return toast.error("Wrong answer to CAPTCHA!");
-
+    if (!isCaptchaCorrect()) return toast.error("Wrong CAPTCHA!");
     // Send via EmailJS
     setIsSending(true);
     emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .send(SERVICE_ID, TEMPLATE_ID, formData, {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+        
+      } , PUBLIC_KEY)
       .then(() => {
         toast.success("Message sent successfully!");
         setFormData({ name: "", email: "", message: "", captcha: "" });
