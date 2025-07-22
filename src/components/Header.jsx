@@ -12,31 +12,32 @@ const Header = () => {
 
   const links = ["Home", "About", "Projects", "Contact"];
 
-  // Animation config
+  // Animation for container
   const containerVariants = {
     open: {
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
     closed: {
       transition: {
-        staggerChildren: 0.07,
-        staggerDirection: -1,
+        staggerChildren: 0.1,
+        staggerDirection: -1, // reverse order
       },
     },
   };
 
+  // Animation for each item
   const itemVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -10 },
+    hidden: { opacity: 0, y: -30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
   };
 
   return (
     <header
-      className={`custom-cursor fixed top-0 left-0 w-full ${
+      className={`fixed top-0 left-0 w-full ${
         darkMode ? "bg-black" : "bg-white"
       } shadow-md z-50 transition-colors duration-300`}
     >
@@ -70,9 +71,7 @@ const Header = () => {
           <button
             onClick={() => setDarkMode((prev) => !prev)}
             className={`text-xl transition ${
-              darkMode
-                ? "text-white hover:text-gray-500"
-                : "text-gray-700 hover:text-gray-500"
+              darkMode ? "text-white hover:text-gray-500" : "text-gray-700"
             }`}
           >
             {darkMode ? <FaSun /> : <FaMoon />}
@@ -105,16 +104,16 @@ const Header = () => {
       <AnimatePresence>
         {navOpen && (
           <motion.div
-            key="mobileNav"
+            key="mobileMenu"
             variants={containerVariants}
             initial="closed"
             animate="open"
             exit="closed"
-            className={`md:hidden px-6 py-4 space-y-4 shadow-md ${
+            className={`md:hidden px-6 py-4 shadow-md ${
               darkMode ? "bg-black text-white" : "bg-white text-black"
             }`}
           >
-            {links.map((link, index) => (
+            {links.map((link) => (
               <motion.div
                 key={link}
                 variants={itemVariants}
@@ -123,13 +122,9 @@ const Header = () => {
                 exit="exit"
               >
                 <Link
-                  to={
-                    link.toLowerCase() === "home"
-                      ? "/"
-                      : `/${link.toLowerCase()}`
-                  }
+                  to={link.toLowerCase() === "home" ? "/" : `/${link.toLowerCase()}`}
                   onClick={toggleNav}
-                  className="block text-lg font-medium hover:text-blue-500"
+                  className="block text-lg font-medium mb-3 hover:text-blue-500"
                 >
                   {link}
                 </Link>
