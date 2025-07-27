@@ -1,13 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Create Context
+
 const DarkModeContext = createContext();
 
-// Provider
-export const DarkModeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(true); // default dark
 
-  // Load from localStorage on first load
+export const DarkModeProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(true); 
+
+  
   useEffect(() => {
     const storedPreference = localStorage.getItem("darkMode");
     if (storedPreference !== null) {
@@ -15,7 +15,7 @@ export const DarkModeProvider = ({ children }) => {
     }
   }, []);
 
-  // Save preference to localStorage whenever it changes
+  
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
@@ -27,5 +27,5 @@ export const DarkModeProvider = ({ children }) => {
   );
 };
 
-// Hook
+
 export const useDarkMode = () => useContext(DarkModeContext);

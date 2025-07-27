@@ -109,7 +109,7 @@ const Home = () => {
                 toast.success("Thank you for downloading my resume! 😊")
                 
               }
-              className={`custom-cursor  mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
+              className={`custom-cursor  pointer-events-none mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
                 darkMode
                   ? "border-white text-white hover:bg-white hover:text-black"
                   : "border-black text-black hover:bg-black hover:text-white"
