@@ -18,10 +18,13 @@ import {
   SiJavascript,
     SiTypescript,
   SiPython,
+  SiKotlin,
+  SiSwift,
 } from "react-icons/si";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import GithubProjects from "../components/GithubProjects";
+import Experience from "./Experience";
 
 import toast from "react-hot-toast";
 
@@ -43,6 +46,8 @@ const Home = () => {
       { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
       { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
       { name: "Python", icon: <SiPython className="text-green-600" /> },
+      { name: "Kotlin", icon: <SiKotlin className="text-purple-600" /> },
+      { name: "Swift", icon: <SiSwift className="text-blue-700" /> },
       { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
     ];
 
@@ -84,6 +89,8 @@ const Home = () => {
             using modern technologies.
           </p>
 
+          <Experience/>
+
           <div className="flex gap-10">
             <Link
               to="/projects"
@@ -96,13 +103,13 @@ const Home = () => {
               View Projects
             </Link>
             <a
-              href="/resume.pdf"
+              href="/updatedresume.pdf"
               download
               onClick={() =>
                 toast.success("Thank you for downloading my resume! 😊")
                 
               }
-              className={`custom-cursor mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
+              className={`custom-cursor pointer-events-none mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
                 darkMode
                   ? "border-white text-white hover:bg-white hover:text-black"
                   : "border-black text-black hover:bg-black hover:text-white"
@@ -111,6 +118,7 @@ const Home = () => {
               Download Resume
             </a>
           </div>
+          
           <GithubProjects />
         </motion.section>
 
