@@ -13,10 +13,16 @@ const About = () => {
     if (visitorName && visitorName.trim() !== "") {
       setVisitor(visitorName)
     } else {
-      setVisitor("there")
+      setVisitor("there");
     }
 
   }, []);
+  const capitalize = (name) => name ? name.chart(0).toUpperCase() + name.slice(1) : "";
+    
+    
+  
+
+  
 
   return (
     <motion.section
@@ -33,7 +39,7 @@ const About = () => {
         </h2>
 
         <p className="text-lg md:text-xl leading-relaxed">
-          👋 Hi {visitor.charAt(0).toUpperCase() + visitor.slice(1)}! My name is Kalu
+          👋 Hi {capitalize(visitor)}! My name is Kalu
           Ogbonnaya Prince, a passionate and performance-driven Software
           Engineer based in Lagos, Nigeria. With over 4 years of hands-on
           experience, I specialize in building fast, scalable, and user-friendly
