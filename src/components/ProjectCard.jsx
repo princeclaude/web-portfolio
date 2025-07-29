@@ -1,4 +1,4 @@
-// src/components/ProjectCard.jsx
+
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ project, onOpen }) => (

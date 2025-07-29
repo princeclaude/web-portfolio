@@ -46,7 +46,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => (
               {project.description}
             </p>
 
-            {/* Tech badges */}
+            
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
@@ -58,7 +58,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => (
               ))}
             </div>
 
-            {/* Links */}
+            
             <div className="flex gap-4 pt-4">
               <a
                 href={project.live}

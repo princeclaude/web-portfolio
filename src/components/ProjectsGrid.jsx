@@ -1,4 +1,4 @@
-// src/components/ProjectsGrid.jsx
+
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";

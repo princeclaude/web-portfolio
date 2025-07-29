@@ -47,7 +47,7 @@ const Footer = () => {
     >
       <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-4">
         <div className="text-sm">
-          {new Date().getFullYear()} Prince Kalu. All rights
+         &copy; {new Date().getFullYear()} Prince Kalu. All rights
           reserved.
           <div className="text-xs mt-1 opacity-80">
             <p>Email: techmadeus@gmail.com</p>
