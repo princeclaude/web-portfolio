@@ -55,11 +55,16 @@ const AcademicHighlight = () => {
             It might interest you!
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            I have a strong academic foundation, a Bsc in Computer Science. My journey began with curiosity and led to a B.Sc. degree, where I explored data structures, algorithms, web technologies, and problem-solving at scale.
-            Furthermore, going indepth with full focus on Software engineering, a decision that has expanded my knowledge in software development throughtout its lifecycle.
+            I hold a B.Sc. in Computer Science, which provided a strong academic
+            foundation in data structures, algorithms, web technologies, and
+            scalable problem-solving. Driven by curiosity, my journey evolved
+            into a focused pursuit of software engineering—deepening my
+            understanding of the entire software development lifecycle and
+            strengthening my ability to build efficient, maintainable systems.
             <br />
             <br />
-            This backgroud helps me blend solid theory with practical web development — writing clean, efficient, and scalable code.
+            This backgroud helps me blend solid theory with practical web
+            development — writing clean, efficient, and scalable code.
           </p>
         </motion.div>
       </div>

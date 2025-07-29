@@ -85,11 +85,11 @@ const Home = () => {
           />
 
           <p className="text-lg md:text-xl max-w-2xl mb-6">
-            I love building beautiful, responsive, and scalable applications
-            using modern technologies.
+            I specialize in crafting responsive, high-performance applications
+            with a focus on modern technologies and clean design.
           </p>
 
-          <Experience/>
+          <Experience />
 
           <div className="flex gap-10">
             <Link
@@ -107,7 +107,6 @@ const Home = () => {
               download
               onClick={() =>
                 toast.success("Thank you for downloading my resume! 😊")
-                
               }
               className={`custom-cursor  pointer-events-none mt-4 inline-block px-6 py-3 font-semibold rounded-md border-2 shadow-md transition duration-300 ${
                 darkMode
@@ -118,7 +117,7 @@ const Home = () => {
               Download Resume
             </a>
           </div>
-          
+
           <GithubProjects />
         </motion.section>
 
