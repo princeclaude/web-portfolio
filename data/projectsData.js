@@ -18,8 +18,8 @@ export const projects = [
   {
     id: 2,
     title: "Portfolio ",
-    cover: "/images/pro2.jpg",
-    screenshots: ["/images/pro1.jpg", "/images/pro3.jpg"],
+    cover: "/images/pro1.jpg",
+    screenshots: ["/images/pro2.jpg", "/images/pro3.jpg"],
     description:
       "Animated portfolio with dark mode, EmailJS contact form and GitHub API.",
     tech: ["Vite", "React", "Framer Motion", "EmailJS"],

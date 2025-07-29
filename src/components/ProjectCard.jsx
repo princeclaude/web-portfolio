@@ -5,7 +5,7 @@ const ProjectCard = ({ project, onOpen }) => (
   <motion.div
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.98 }}
-    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden cursor-pointer"
+    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden cursor-pointer mb-10"
     onClick={() => onOpen(project)}
   >
     <img

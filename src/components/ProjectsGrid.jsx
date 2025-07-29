@@ -8,7 +8,7 @@ const ProjectsGrid = () => {
 
   return (
     <>
-      <div className="h-auto grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="h-auto grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3, mb-10">
         {projects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} onOpen={setSelected} />
         ))}
