@@ -17,7 +17,7 @@ const About = () => {
     }
 
   }, []);
-  const capitalize = (name) => name ? name.chart(0).toUpperCase() + name.slice(1) : "";
+  const capitalize = (name) => name ? name.charAt(0).toUpperCase() + name.slice(1) : "";
     
     
   
