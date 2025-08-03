@@ -43,4 +43,19 @@ export const projects = [
     live: "https://github.com/princeclaude/cryptotracker",
     github: "https://github.com/princeclaude/cryptotracker",
   },
+  {
+    id: 4,
+    title: "Music Mobile App",
+    cover: "/images/music1.jpg",
+    screenshots: [
+      "/images/music2.jpg",
+      "/images/music3.jpg",
+      "/images/music4.jpg",
+    ],
+    description:
+      "A music mobile app built with Expo React native and Audius music API, the app has many fantastic features including 'Listen together, this let users listen to their favorite track together with their friends and family members.'",
+    tech: ["Expo", "React native", "Audius Api"],
+    live: "https://streamable.com/qfi4kp?src=player-page-share",
+    github: "https://github.com/princeclaude/cryptotracker",
+  },
 ];
