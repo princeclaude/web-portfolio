@@ -44,10 +44,10 @@ const Home = () => {
       { name: "Firebase", icon: <SiFirebase className="text-orange-400" /> },
       { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
       { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
-      { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+      
       { name: "Python", icon: <SiPython className="text-green-600" /> },
-      { name: "Kotlin", icon: <SiKotlin className="text-purple-600" /> },
-      { name: "Swift", icon: <SiSwift className="text-blue-700" /> },
+      
+    
       { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
     ];
 

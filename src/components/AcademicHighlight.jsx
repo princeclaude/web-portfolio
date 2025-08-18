@@ -55,7 +55,7 @@ const AcademicHighlight = () => {
             It might interest you!
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            I hold a B.Sc. in Computer Science, which provided a strong academic
+            Software engineer trained through immersive technology bootcamps which has provided a strong
             foundation in data structures, algorithms, web technologies, and
             scalable problem-solving. Driven by curiosity, my journey evolved
             into a focused pursuit of software engineering—deepening my
