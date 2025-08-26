@@ -58,4 +58,15 @@ export const projects = [
     live: "https://streamable.com/qfi4kp?src=player-page-share",
     github: "https://github.com/princeclaude/cryptotracker",
   },
+  {
+    id: 5,
+    title: "Chat App",
+    cover: "/images/chatcover.jpg",
+    screenshots: ["/images/chat1jpg", "/images/chat2.jpg", "/images/chat3.jpg"],
+    description:
+      "Chirp is a lightweight, privacy-first instant messaging platform designed to make connecting with people simple, safe, and stress-free. Instead of relying on usernames, emails, or phone numbers, Chirp uses a unique PIN system that makes meeting new people and starting conversations easier than ever.",
+    tech: ["Vite", "React", "Firebase", "Firestore","Pixabay"],
+    live: "https://streamable.com/u1oyha",
+    github: "https://github.com/princeclaude/chat-app",
+  },
 ];
