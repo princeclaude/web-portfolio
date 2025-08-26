@@ -40,18 +40,18 @@ export default function Experience() {
               Collaborated with a team of frontend developers to deliver
               responsive and scalable user interfaces.
             </li>
-            {/* <li>
+            <li>
               Oversaw development and maintenance of multiple web and mobile
               applications, including Carlton Food and Carlton Game.
-            </li> */}
+            </li>
             <li>
               Improved the UI/UX of existing production apps, resulting in
               enhanced performance and user engagement.
             </li>
-            {/* <li>
+            <li>
               Authored technical blog content for Tech Today, Carlton's official
               tech publication.
-            </li> */}
+            </li>
           </ul>
         </div>
         <div
