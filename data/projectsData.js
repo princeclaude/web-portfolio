@@ -62,7 +62,7 @@ export const projects = [
     id: 5,
     title: "Chat App",
     cover: "/images/chatcover.jpg",
-    screenshots: ["/images/chat1jpg", "/images/chat2.jpg", "/images/chat3.jpg"],
+    screenshots: ["/images/chat1.jpg", "/images/chat2.jpg", "/images/chat3.jpg"],
     description:
       "Chirp is a lightweight, privacy-first instant messaging platform designed to make connecting with people simple, safe, and stress-free. Instead of relying on usernames, emails, or phone numbers, Chirp uses a unique PIN system that makes meeting new people and starting conversations easier than ever.",
     tech: ["Vite", "React", "Firebase", "Firestore","Pixabay"],
